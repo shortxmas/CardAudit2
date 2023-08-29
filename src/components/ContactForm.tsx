@@ -1,6 +1,6 @@
 import "../styles/styles.css"
 
-export function LoginForm()
+export function ContactForm()
 {
     let primaryColor = '#5C8374';
     // let secondaryColor = '#93B1A6';
@@ -17,11 +17,20 @@ export function LoginForm()
                     <div className="col-12 col-lg-6 boxShadow" style={{backgroundColor:boxColor,borderRadius: '15px',boxShadow:'100px'}}>
                         <div className="p-5" >
                           <h4 style={{color:primaryColor}}>
-                              Login
+                              Contact
                           </h4>
-                          <br></br>
+                          <p> Want to contact the creator or have suggestions to improve the site?</p>
+                          
                           <form>
                               <div>
+                                  <div id="name">
+                                      <p>Name</p>
+                                      <div className="input-group">
+                                          <input type="text" className="form-control" required></input>
+
+                                      </div>
+                                  </div>
+                                  <br></br>
                                   <div id="email">
                                       <p>Email</p>
                                       <div className="input-group">
@@ -30,8 +39,8 @@ export function LoginForm()
                                       </div>
                                   </div>
                                   <br></br>
-                                  <div id="password">
-                                      <p>Password</p>
+                                  <div id="message">
+                                      <p>Message</p>
                                       <div className="input-group">
                                           <input type="text" className="form-control" required></input>
 

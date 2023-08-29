@@ -2,6 +2,7 @@ import { BrowserRouter,Routes, Route,Link} from "react-router-dom";
 import { Home } from "../views/Home";
 import { Login } from "../views/Login";
 import { CreateAccount } from "../views/CreateAccount";
+import { Contact } from "../views/Contact";
 
 
 
@@ -54,6 +55,12 @@ export function Navbar()
                         </li>
                     </Link>
 
+                    <Link to="/contact" style={{ textDecoration: 'none' }}>
+                        <li className="nav-item">
+                            <a className="nav-link">Contact</a>
+                        </li>
+                    </Link>
+
                     </ul>
                 </div>
                 
@@ -74,6 +81,7 @@ export function Navbar()
             <Route path="/" element={<Home/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/createaccount" element={<CreateAccount/>}/>
+            <Route path="/contact" element={<Contact/>}/>
         </Routes>
 
     </BrowserRouter>

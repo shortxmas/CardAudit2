@@ -1,3 +1,5 @@
+import { CreateAccountForm } from "../components/CreateAccountForm"
+
 export function CreateAccount()
 {
     return(
@@ -5,7 +7,7 @@ export function CreateAccount()
 
         <>
             <div>
-                CreateAccount
+                <CreateAccountForm/>
             </div>
         
         </>

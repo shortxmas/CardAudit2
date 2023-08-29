@@ -15,7 +15,7 @@ export function CreateAccountForm()
             <div className="container p-5 my-5">
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-6 boxShadow" style={{backgroundColor:boxColor,borderRadius: '15px',boxShadow:'100px'}}>
-                        <div className="p-5" >
+                      <div className="p-lg-5 p-4" >
                           <h4 style={{color:primaryColor}}>
                               Create Account
                           </h4>
@@ -39,7 +39,7 @@ export function CreateAccountForm()
                                   </div>
                                   <br></br>
 
-                                  <button type="button" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
+                                  <button type="submit" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
 
                                   
                               </div>

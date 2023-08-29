@@ -1,3 +1,5 @@
+import { LoginForm } from "../components/LoginForm"
+
 export function Login()
 {
     return(
@@ -5,7 +7,7 @@ export function Login()
 
         <>
             <div>
-                Login
+                <LoginForm/>
             </div>
         
         </>

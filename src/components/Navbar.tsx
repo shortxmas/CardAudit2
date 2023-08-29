@@ -4,22 +4,24 @@ import { Login } from "../views/Login";
 import { CreateAccount } from "../views/CreateAccount";
 
 
+
 export function Navbar() 
 {
-  
+  let primaryColor = '#5C8374';
+  let secondaryColor = '#93B1A6';
 
   return (
     <>
       
     <BrowserRouter>
-        <div className="navbar navbar-expand-lg navbar-light  bg-light">
+        <div className="navbar navbar-expand-lg navbar-light  bg-light" style={{padding:'20px'}}>
             <div className="container">
 
-                <a className="navbar-brand" style={{color:'#5f91bb',}}>
+                <a className="navbar-brand">
             
-                    <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Link to="/" style={{ textDecoration: 'none'}}>
                         <a className="nav-link">
-                            <h2 style={{color:'#5f91bb'}}>
+                            <h2 style={{color:primaryColor}}>
                                 cardaudit.co
                             </h2>
                         </a>
@@ -56,7 +58,7 @@ export function Navbar()
                 </div>
                 
 
-                <span className="navbar-text" style={{color:'#5f91bb',display:'inline'}}>
+                <span className="navbar-text" style={{color:secondaryColor,display:'inline'}}>
                     <h6>
                     Manage your debts.
                     </h6>

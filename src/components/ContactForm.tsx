@@ -16,39 +16,57 @@ export function ContactForm()
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-6 boxShadow" style={{backgroundColor:boxColor,borderRadius: '15px',boxShadow:'100px'}}>
                         <div className="p-lg-5 p-4" >
-                          <h4 style={{color:primaryColor}}>
-                              Contact
-                          </h4>
-                          <p> Want to contact the creator or have suggestions to improve the site?</p>
+                          <div className="py-1">
+                            <h4 style={{color:primaryColor}}>
+                                Contact
+                            </h4>
+                          
+                            <text style={{fontSize:'13px',lineHeight:'.1'}}> Want to contact the creator or have suggestions to improve the site?</text>
+                          </div>
                           
                           <form action="https://backendform.com/sendform.php/leightonmiguelweb@gmail.com" method="get">
                               <div>
-                                  <div id="name">
-                                      <p>Name</p>
+                                  <div id="name" className="py-1">
+                                      <div>
+                                        <text>
+                                            Name
+                                        </text>
+                                      </div>
+
                                       <div className="input-group">
                                           <input type="text" className="form-control" name="Name" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
-                                  <div id="email">
-                                      <p>Email</p>
+                                  
+                                  <div id="email" className="py-1">
+                                      <div>
+                                        <text>
+                                            Email
+                                        </text>
+                                      </div>
                                       <div className="input-group">
                                           <input type="email" className="form-control" name="Email" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
-                                  <div id="message">
-                                      <p>Message</p>
+                                  
+                                  <div id="message" className="py-1">
+                                      <div>
+                                        <text>Message</text>
+
+                                      </div>
                                       <div className="input-group">
                                           <input type="text" className="form-control" name = "Message" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
+                                  
+                                
+                                  <div className="py-2"> 
+                                    <button type="submit" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
 
-                                  <button type="submit" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
+                                  </div>
 
                                   
                               </div>

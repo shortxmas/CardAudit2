@@ -15,31 +15,37 @@ export function CreateAccountForm()
             <div className="container p-5 my-5">
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-6 boxShadow" style={{backgroundColor:boxColor,borderRadius: '15px',boxShadow:'100px'}}>
-                      <div className="p-lg-5 p-4" >
+                        <div className="p-lg-5 p-4" >
                           <h4 style={{color:primaryColor}}>
-                              Create Account
+                              Create an Account
                           </h4>
-                          <br></br>
+                          
                           <form>
                               <div>
-                                  <div id="email">
-                                      <p>Email</p>
-                                      <div className="input-group">
+                                  <div id="email" className="py-2">
+                                      <div >
+                                        <text>Email</text>
+                                      </div>
+                                      <div className="input-group ">
                                           <input type="email" className="form-control" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
-                                  <div id="password">
-                                      <p>Password</p>
-                                      <div className="input-group">
+                                  
+                                  <div id="password" className="py-2">
+                                      <div >
+                                        <text>Password</text>
+                                      </div>
+                                      <div className="input-group ">
                                           <input type="text" className="form-control" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
+                                  
+                                    <div className="py-2">
+                                        <button type="submit" className="btn-light btn" style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
 
-                                  <button type="submit" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
+                                    </div>
 
                                   
                               </div>

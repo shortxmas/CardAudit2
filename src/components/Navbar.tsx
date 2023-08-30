@@ -3,6 +3,7 @@ import { Home } from "../views/Home";
 import { Login } from "../views/Login";
 import { CreateAccount } from "../views/CreateAccount";
 import { Contact } from "../views/Contact";
+import { Db } from "../views/Db";
 
 
 
@@ -82,6 +83,9 @@ export function Navbar()
             <Route path="/login" element={<Login/>}/>
             <Route path="/createaccount" element={<CreateAccount/>}/>
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="/db" element={<Db/>}/>
+
+            
         </Routes>
 
     </BrowserRouter>

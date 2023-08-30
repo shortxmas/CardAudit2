@@ -19,27 +19,33 @@ export function LoginForm()
                           <h4 style={{color:primaryColor}}>
                               Login
                           </h4>
-                          <br></br>
+                          
                           <form>
                               <div>
-                                  <div id="email">
-                                      <p>Email</p>
-                                      <div className="input-group">
+                                  <div id="email" className="py-2">
+                                      <div >
+                                        <text>Email</text>
+                                      </div>
+                                      <div className="input-group ">
                                           <input type="email" className="form-control" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
-                                  <div id="password">
-                                      <p>Password</p>
-                                      <div className="input-group">
+                                  
+                                  <div id="password" className="py-2">
+                                      <div >
+                                        <text>Password</text>
+                                      </div>
+                                      <div className="input-group ">
                                           <input type="text" className="form-control" required></input>
 
                                       </div>
                                   </div>
-                                  <br></br>
+                                  
+                                    <div className="py-2">
+                                        <button type="submit" className="btn-light btn" style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
 
-                                  <button type="submit" className="btn-light btn " style={{backgroundColor:primaryColor,color:'white'}}>Submit</button>
+                                    </div>
 
                                   
                               </div>

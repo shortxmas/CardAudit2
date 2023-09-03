@@ -1,16 +1,23 @@
 import { BrowserRouter,Routes, Route,Link} from "react-router-dom";
 import { Home } from "../views/Home";
-import { Login } from "../views/Login";
-import { CreateAccount } from "../views/CreateAccount";
 import { Contact } from "../views/Contact";
-import { Db } from "../views/Db";
+import { LoginButton } from "./LoginButton";
+import { LogoutButton } from "./LogoutButton";
 
 
+
+  
 
 export function Navbar() 
 {
-  let primaryColor = '#5C8374';
-  let secondaryColor = '#93B1A6';
+    
+    let primaryColor = '#5C8374';
+    let secondaryColor= '#93B1A6';
+
+    
+
+    
+    
 
   return (
     <>
@@ -44,17 +51,7 @@ export function Navbar()
                 <div className= "collapse navbar-collapse"  id="nav">
                     <ul className="navbar-nav navbar-right nav-routes">
                     
-                    <Link to="/login" style={{ textDecoration: 'none' }}>
-                        <li className="nav-item">
-                            <a className="nav-link">Login</a>
-                        </li>
-                    </Link>
-
-                    <Link to="/createaccount" style={{ textDecoration: 'none' }}>
-                        <li className="nav-item">
-                            <a className="nav-link">Create Account</a>
-                        </li>
-                    </Link>
+                    
 
                     <Link to="/contact" style={{ textDecoration: 'none' }}>
                         <li className="nav-item">
@@ -66,10 +63,10 @@ export function Navbar()
                 </div>
                 
 
-                <span className="navbar-text" style={{color:secondaryColor,display:'inline'}}>
-                    <h6>
-                    Manage your debts.
-                    </h6>
+                <span className="navbar-brand" style={{color:secondaryColor,display:'inline'}}>
+                    <div>
+                        <LoginButton/>
+                    </div>
                 </span>
         
             
@@ -80,10 +77,9 @@ export function Navbar()
 
         <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/createaccount" element={<CreateAccount/>}/>
+            
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/db" element={<Db/>}/>
+            
 
             
         </Routes>

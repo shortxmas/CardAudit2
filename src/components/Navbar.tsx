@@ -23,21 +23,16 @@ export function Navbar()
     <>
       
     <BrowserRouter>
-        <div className="navbar navbar-expand-lg navbar-light p-3 bg-light" >
-            <div className="container">
+        <div className="navbar navbar-expand-lg navbar-light p-4 bg-light" >
+            <div className="container ">
 
-                <a className="navbar-brand">
-            
-                    <Link to="/" style={{ textDecoration: 'none'}}>
-                        <a className="nav-link">
-                            <h2 style={{color:primaryColor}}>
-                                cardaudit.co
-                            </h2>
-                        </a>
-                    </Link>
+                <Link to="/" style={{ textDecoration: 'none' }}> 
+                    <a className="navbar-brand" style={{color:primaryColor}}>
+                       <text className="h2">cardaudit.co</text>
                     
-
-                </a>
+                    </a>
+                </Link>
+                
 
                 <button className="navbar-toggler" data-bs-toggle = "collapse"
                 data-bs-target = "#nav" aria-controls = "nav" aria-label=
@@ -50,18 +45,28 @@ export function Navbar()
 
                 <div className= "collapse navbar-collapse"  id="nav">
                     
-                    
-                    <ul className="navbar-nav navbar-right nav-routes">
-                    
-                    
-
-                    <Link to="/contact" style={{ textDecoration: 'none' }}>
-                        <li className="nav-item">
-                            <a className="nav-link">Contact</a>
-                        </li>
-                    </Link>
+                    <ul className="navbar-nav nav-routes">
+                        
+                        <Link to="/" style={{ textDecoration: 'none' }}>
+                            <li className="nav-item">
+                                <a className="nav-link">Home</a>
+                            </li>
+                        </Link>
 
                     </ul>
+
+                    <ul className="navbar-nav nav-routes">
+                    
+                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                            <li className="nav-item">
+                                <a className="nav-link">Contact</a>
+                            </li>
+                        </Link>
+
+                    </ul>
+
+                    
+
                 </div>
 
                 <ul className="navbar-nav navbar-right nav-routes">
@@ -72,6 +77,7 @@ export function Navbar()
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
+                                style={{backgroundColor:'#137a63'}}
                             >
                              Account   
                             </a>

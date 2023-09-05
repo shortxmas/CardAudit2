@@ -2,7 +2,7 @@ import { BrowserRouter,Routes, Route,Link} from "react-router-dom";
 import { Home } from "../views/Home";
 import { Contact } from "../views/Contact";
 import { LoginButton } from "./LoginButton";
-import { LogoutButton } from "./LogoutButton";
+
 
 
 
@@ -12,7 +12,7 @@ export function Navbar()
 {
     
     let primaryColor = '#5C8374';
-    let secondaryColor= '#93B1A6';
+
 
     
 
@@ -23,7 +23,7 @@ export function Navbar()
     <>
       
     <BrowserRouter>
-        <div className="navbar navbar-expand-lg navbar-light  bg-light" style={{padding:'20px'}}>
+        <div className="navbar navbar-expand-lg navbar-light p-3 bg-light" >
             <div className="container">
 
                 <a className="navbar-brand">
@@ -49,6 +49,8 @@ export function Navbar()
                 </button>
 
                 <div className= "collapse navbar-collapse"  id="nav">
+                    
+                    
                     <ul className="navbar-nav navbar-right nav-routes">
                     
                     
@@ -61,13 +63,33 @@ export function Navbar()
 
                     </ul>
                 </div>
+
+                <ul className="navbar-nav navbar-right nav-routes">
+                        <div className="dropdown">
+                            <a
+                                className="btn btn-secondary dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                             Account   
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li>
+                                    <a className="dropdown-item" style={{cursor:"pointer"}}>
+                                        <LoginButton/>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+
+                        </div>
+
+                    </ul>
                 
 
-                <span className="navbar-brand" style={{color:secondaryColor,display:'inline'}}>
-                    <div>
-                        <LoginButton/>
-                    </div>
-                </span>
+                
         
             
             </div>

@@ -1,9 +1,10 @@
+import { auth } from "../back/firebase"
 import { useState } from "react"
 
 export function Home()
 {
    
-    
+    console.log(auth.currentUser?.email)
     const [test,test2] = useState('')
     
     

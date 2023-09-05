@@ -55,14 +55,16 @@ export function LoginButton()
     <>
       <div>
         
-        <button type="button" className="btn btn-light" style={{backgroundColor:'white',display:loginStyle}}
+        <div  style={{display:loginStyle}}
         onClick={login} 
         >
           <img src={logo} width="30" height="30" className="align-middle " alt=""></img>
           <text className='align-middle px-2 '>Login with Google</text>
-        </button>
+        </div>
 
-        <button type="button" className="btn btn-light" onClick={logout} style={{backgroundColor:'white',display:logoutStyle}}>Logout</button>
+        <div  onClick={logout} style={{display:logoutStyle}}>Logout</div>
+
+        
         
       </div>
 

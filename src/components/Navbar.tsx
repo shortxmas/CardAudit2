@@ -2,6 +2,10 @@ import { BrowserRouter,Routes, Route,Link} from "react-router-dom";
 import { Home } from "../views/Home";
 import { Contact } from "../views/Contact";
 import { LoginButton } from "./LoginButton";
+import { auth } from "../back/firebase";
+import { useState } from "react";
+
+
 
 
 
@@ -12,6 +16,28 @@ export function Navbar()
 {
     
     let primaryColor = '#5C8374';
+
+
+    
+    const [accountText,changeAccountText] = useState('Account')
+    
+
+    auth.onAuthStateChanged(user=>{
+
+     if(user?.email!=null)
+     {
+        changeAccountText(user.email)
+        
+     }
+     else{
+        changeAccountText('Account')
+     }
+
+
+
+
+
+    })
 
 
     
@@ -27,7 +53,7 @@ export function Navbar()
             <div className="container ">
 
                 <Link to="/" style={{ textDecoration: 'none' }}> 
-                    <a className="navbar-brand" style={{color:primaryColor}}>
+                    <a className="navbar-brand navbar-nav" style={{color:primaryColor}}>
                        <text className="h2">cardaudit.co</text>
                     
                     </a>
@@ -79,7 +105,7 @@ export function Navbar()
                                 aria-expanded="false"
                                 style={{backgroundColor:'#137a63'}}
                             >
-                             Account   
+                             {accountText} 
                             </a>
                             <ul className="dropdown-menu">
                                 <li>
